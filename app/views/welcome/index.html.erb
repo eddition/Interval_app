@@ -1,0 +1,7 @@
+<button id='refill'>click</button>
+
+<ul>
+<% @states.each do |state| %>
+  <li><%=state.name%>: <%=state.prices.last.price%></li>
+<%end%>
+</ul>
