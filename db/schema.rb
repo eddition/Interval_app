@@ -11,17 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140207055023) do
-
-  create_table "prices", :force => true do |t|
-    t.float    "price"
-    t.integer  "state_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20140207050101) do
 
   create_table "states", :force => true do |t|
     t.string   "name"
+    t.float    "price"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

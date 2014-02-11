@@ -1,6 +1,3 @@
 class State < ActiveRecord::Base
-  attr_accessible :name, :prices
-  has_many :prices
-
-
+  attr_accessible :name, :price
 end
