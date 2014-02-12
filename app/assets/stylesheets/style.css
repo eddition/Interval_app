@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+}
+rect {
+  fill: steelblue;
+}
+.axis text {
+  font: 11px sans-serif;
+}
+
+.y {
+  padding-right: 10px;
+}
+
+.axis path,
+.axis line {
+  z-index: 1;
+  fill: none;
+  stroke: blue;
+  shape-rendering: crispEdges;
+}
+.tick {
+  text-align: right;
+}
+h1 {
+  color: blue;
+}
