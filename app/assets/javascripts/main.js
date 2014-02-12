@@ -3,9 +3,6 @@ var pricesArray = [];
 $(document).ready(function(){
   console.log('ready');
   getStates();
-
-
-
 }); //-----closes document on ready----
 
 
@@ -61,8 +58,8 @@ function getStates() {
     })
     .attr('width', xScale.rangeBand());
 
-
   });//---end of done function---
+
 }//----end of function---
 
 
