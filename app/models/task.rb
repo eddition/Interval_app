@@ -1,5 +1,6 @@
-class WelcomeController < ApplicationController
-  def index
+class Task
+
+  def self.update_states
 
     url = 'http://apify.heroku.com/api/gasprices.json'
     @response = HTTParty.get(url)
@@ -9,8 +10,10 @@ class WelcomeController < ApplicationController
         cost = state['regular'].gsub(/[^\d\.]/, '').to_f
         current_state[0].price = cost
         current_state[0].save
+        binding.pry
       end
     end
 
   end
+
 end

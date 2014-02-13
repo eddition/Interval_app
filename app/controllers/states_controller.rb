@@ -5,7 +5,5 @@ class StatesController < ApplicationController
       format.json {render :json => @states}
     end
   end
-  def show
 
-  end
 end

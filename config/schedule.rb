@@ -19,16 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.hour do
-  url = 'http://apify.heroku.com/api/gasprices.json'
-  @response = HTTParty.get(url)
-  @response.each do |state|
-    current_state = State.where(name: state['state'])
-    if current_state.length > 0
-      cost = state['regular'].gsub(/[^\d\.]/, '').to_f
-      current_state[0].price = cost
-      current_state[0].save
-    end
-  end
-
+every 1.hours do
+  runner "Task.update_states"
 end
