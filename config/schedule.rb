@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.hours do
+every 1.minutes do
   runner "Task.update_states"
 end

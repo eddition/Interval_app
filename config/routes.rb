@@ -3,5 +3,4 @@ IntervalApp::Application.routes.draw do
 
   get "welcome/index"
   resources :states
-  resources :prices
 end

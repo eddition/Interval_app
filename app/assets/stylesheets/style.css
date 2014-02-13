@@ -29,3 +29,7 @@ rect {
 h1 {
   color: blue;
 }
+
+.hovered {
+  display: inline-block;
+}
