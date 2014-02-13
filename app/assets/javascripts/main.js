@@ -5,6 +5,7 @@ var pricesArray = [];
 $(document).ready(function(){
   console.log('ready');
   getStates();
+
 }); //-----closes document on ready----
 
 
@@ -112,16 +113,16 @@ function createTable() {
         .enter()
         .append('tr');
 
-$('tbody').children().each(function(index, value){
-    var date = new Date(objectsArray[index].created_at);
-    date = date.getMonth()+'/'+ date.getDate()+'/'+ date.getYear();
-    $(value).append('<td>'+date+'</td>');
-    $(value).append('<td>'+objectsArray[index].id+'</td>');
-    $(value).append('<td>'+objectsArray[index].name+'</td>');
-    $(value).append('<td>'+objectsArray[index].price+'</td>');
-});
-$("table th:last-child").remove();
-$("table th:nth-child(2)").remove();
-$("table tr td:nth-child(2)").remove();
+    $('tbody').children().each(function(index, value){
+        var date = new Date(objectsArray[index].created_at);
+        date = date.getMonth()+'/'+ date.getDate()+'/'+ date.getYear()+' at '+ date.getHours()+':'+date.getMinutes();
+        $(value).append('<td>'+date+'</td>');
+        $(value).append('<td>'+objectsArray[index].id+'</td>');
+        $(value).append('<td>'+objectsArray[index].name+'</td>');
+        $(value).append('<td>'+objectsArray[index].price+'</td>');
+    });
+    $("table th:last-child").remove();
+    $("table th:nth-child(2)").remove();
+    $("table tr td:nth-child(2)").remove();
 }
 
